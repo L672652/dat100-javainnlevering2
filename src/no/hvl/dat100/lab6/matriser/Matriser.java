@@ -4,32 +4,60 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
+		for(int []tbl:matrise) {
+			for(int nummer :tbl) {
+				System.out.print(nummer + " ");
+			}
+		}
 		
 		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
-
+		String tekst=("");
+		for(int[]indre:matrise) {
+			for(int tallet:indre) {
+				tekst=(tekst + tallet + " ");
+			}
+			tekst=(tekst+"\n");
+		}
+		return tekst;
 		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
 		
 	}
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
+		int[][] fullMatrisen= new int[matrise.length][];
+		for(int i=0;i<matrise.length;i++) {
+			int[] fullTabell=new int[matrise[i].length];
+			for(int j=0;j<fullTabell.length;j++) {
+				fullTabell[j]=matrise[i][j]*tall;
+			}
+			fullMatrisen[i]=fullTabell;
+		}
+		return fullMatrisen;
 		
 		// TODO
-		throw new UnsupportedOperationException("skaler ikke implementert");
 	
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
-
+		boolean resultat=false;
+		for(int m=0;m<a.length;m++) {
+			for(int g=0;g<a[m].length;g++) {
+				if(a[m][g]==b[m][g]) {
+					resultat=true;
+				}
+				else {
+					resultat=false;
+				}
+			}
+		}
+		return resultat;
 		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
 	}
 	
 	// e)
