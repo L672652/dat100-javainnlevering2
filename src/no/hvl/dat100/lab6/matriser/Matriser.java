@@ -53,6 +53,7 @@ public class Matriser {
 				}
 				else {
 					resultat=false;
+					return resultat;
 				}
 			}
 		}
@@ -62,9 +63,17 @@ public class Matriser {
 	
 	// e)
 	public static int[][] speile(int[][] matrise) {
+		int [][] mirror= new int[matrise.length][];
+		for(int p=0;p<mirror.length;p++) {
+			int[] snudd= new int [matrise[p].length];
+			for(int d=0;d<snudd.length;d++) {
+				snudd[d]=matrise[d][p];
+			}
+			mirror[p]=snudd;
+		}
+		return mirror;
 
 		// TODO
-		throw new UnsupportedOperationException("speile ikke implementert");
 	
 	}
 
