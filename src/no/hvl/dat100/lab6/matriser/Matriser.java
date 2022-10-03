@@ -79,10 +79,26 @@ public class Matriser {
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
-		
+		if(a.length!=b[0].length) {
+			return(new int [0][0]);
+		}
+		int aRader=a.length;
+		int aKolonner=a[0].length;
+		int bKolonner=b[0].length;
+		int [][] matrix= new int [aRader][bKolonner];
+		for(int g=0;g<aRader;g++) {
+			for(int h=0;h<bKolonner;h++) {
+				for(int v=0;v<aKolonner;v++) {
+					int aVerdi=a[g][v];
+					int bVerdi=b[v][h];
+					
+					matrix[g][h]+=aVerdi*bVerdi;
+				}
+			}
+		}
+		return matrix;
 
 		// TODO
-		throw new UnsupportedOperationException("multipliser ikke implementert");
 	
 	}
 }
