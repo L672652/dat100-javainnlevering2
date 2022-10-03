@@ -46,7 +46,7 @@ public class Tabeller {
 			s++;
 		}
 		return sum;
-
+		//bruker utvidet for lokke i oblig 2
 		// TODO
 	}
 
