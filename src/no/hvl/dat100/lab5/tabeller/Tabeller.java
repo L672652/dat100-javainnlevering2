@@ -46,8 +46,21 @@ public class Tabeller {
 			s++;
 		}
 		return sum;
-		//bruker utvidet for lokke i oblig 2
 		// TODO
+	}
+	public static int summer2(int[] tabell) {
+		int summen=0;
+		for(int tallet:tabell) {
+			summen=summen+tallet;
+		}
+		return summen;
+	}
+	public static int summer3(int[] tabell) {
+		int summert=0;
+		for(int l=0;l<tabell.length;l++) {
+			summert+=tabell[l];
+		}
+		return summert;
 	}
 
 	// d)
